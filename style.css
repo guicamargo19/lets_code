@@ -2,7 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.main-container {
+    width: 1024px;
+    margin: 0 auto;
 }
 
 p {
@@ -10,13 +15,8 @@ p {
 }
 
 header {
-    background-color: #565555;
-    color: #fff;
-    padding: 8px;
-}
-
-header .display-4 {
-    font-weight: bold;
+    background-color: darkcyan;
+    color: #eee;
 }
 
 header .nav-link {
@@ -24,7 +24,6 @@ header .nav-link {
     color: #fff;
     padding: 8px;
     margin-left: 6px;
-    font-weight: bold;
 }
 
 nav .nav-item button {
@@ -33,23 +32,36 @@ nav .nav-item button {
 }
 
 header .nav-link:hover {
-    color: #000;
-    background-color: #fff;
+    color: darkcyan;
+    background-color: #eee;
 }
 
 header .nav-link:focus {
-    color: #000;
-    background-color: #fff;
+    color: darkcyan;
+    background-color: #eee;
 }
 
 header .small {
     font-size: 14px;
+    padding-left: 6px;
 }
 
-.dropdown-item a {
-    color: #000;
+.dropdown-menu a{
+    width: 100%;
     text-decoration: none;
+}
+
+a .dropdown-item {
+    color: darkcyan;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
     font-size: 20px;
+}
+
+a .dropdown-item:hover {
+    background-color: darkcyan;
+    color: #eee;
 }
 
 form label {
@@ -73,13 +85,54 @@ form textarea {
 .container-card {
     display: grid;
     grid-template-columns: repeat(3, 32.66%);
-    column-gap: 1%;
+    column-gap: 1%; 
     row-gap: 1%;
     padding-top: 32px;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:black;
+    opacity: 0;
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+}
+
+.container-card .card {
+    border-radius: 14px;
+    position: relative;
+}
+
+.overlay:hover {
+    opacity: 40%;
+}
+
+.container-card .card img {   
+    border-radius: 12px;
+}
+
+.card-body {
+    position: relative;
+}
+
+.card-text {
+    height: 120px;
+}
+
 .row a {
     float: inline-end;
+    z-index: 1;
+    bottom: 12px;
+    right: 12px;
+    position: absolute;
+}
+
+.row a:hover {
+    background-color: darkgoldenrod;
 }
 
 .container-linguagens {
