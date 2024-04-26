@@ -33,6 +33,11 @@ header .nav-link {
     transition: all ease-in-out .2s;
 }
 
+.navbar-collapse {
+    flex-basis: 0;
+    flex-grow: 0;
+}
+
 nav .nav-item button {
     padding-right: 48px;
     color: #000;
@@ -208,6 +213,11 @@ form textarea {
     .navbar-toggler {
         border: none;
     }
+
+    .navbar-collapse {
+        flex-basis: 100%;
+        flex-grow: 1;
+    }
     
     button>span {
         font-size: 24px;
@@ -280,6 +290,11 @@ form textarea {
     .navbar-toggler {
         border: none;
     }
+
+    .navbar-collapse {
+        flex-basis: 100%;
+        flex-grow: 1;
+    }
     
     button>span {
         font-size: 30px;
@@ -309,9 +324,11 @@ form textarea {
 
     .container-card {
         display: grid;
-        grid-template-columns: repeat(2, 50%);
+        grid-template-columns: repeat(2, 48%);
+        column-gap: 4%;
+        row-gap: 2%;
         max-width: 100%;
-        padding-bottom: 60px;
+        margin-bottom: 120px;
     }
 
     .texto-linguagem {
