@@ -2,7 +2,7 @@
 
 ## Apresentação do projeto
 
-
+https://github.com/guicamargo19/lets_code/assets/133445061/7cdcb73d-d335-4331-b567-167f73ce4ad9
 
 Projeto desenvolvido no curso de Full Stack Python da EBAC - Escola Britânica de Artes Criativas e Tecnologia.
 
@@ -25,6 +25,7 @@ Siga estas etapas a seguir para configurar o ambiente de desenvolvimento:
 * **HTML** - Linguagem de marcação utilizada na construção de páginas na Web.
 * **CSS** - Cascading Style Sheets é um mecanismo para adicionar estilos a uma página web.
 * **Bootstrap** - Framework web open-source para desenvolvimento de componentes de interface para sites e aplicações web.
+* **jQuery** - Biblioteca livre que contém funções de JavaScript que interage com páginas em HTML.
 
 ## ✒️ Autor
 
