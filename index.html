@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,34 @@
     <meta name="description" content="Final project of Advanced Bootstrap Module">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@800&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./assets/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Let's Code</title>
 </head>
+
 <body>
-    
+
     <header id="header">
         <div class="main-container">
             <div class="navbar navbar-expand-lg">
                 <div class="container">
                     <h1 class="display-4">Let's Code</h1>
-                    <button name="navbar-toggler" type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <button name="navbar-toggler" type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                        data-bs-target="#menu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <nav class="collapse navbar-collapse" id="menu">
                         <ul class="nav nav-pills">
                             <li class="nav-item">
                                 <a class="nav-link" href="#inicio">Home</a>
                             </li>
                             <li class="nav-item">
                                 <div class="btn-group">
-                                    <button name="dropdown-button" class="nav-link" data-bs-toggle="dropdown">Code<small class="small">▼</small></button>
+                                    <button name="dropdown-button" class="nav-link" data-bs-toggle="dropdown">Code
+                                        <small class="small">▼</small></button>
                                     <ul class="dropdown-menu">
                                         <a href="#html">
                                             <li class="dropdown-item">
@@ -65,7 +71,8 @@
                                 </div>
                             </li>
                             <li class="nav-item nav-item-contato">
-                                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#modal" href="#contato">Contato</a>
+                                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#modal"
+                                    href="#contato">Contato</a>
                             </li>
                         </ul>
                     </nav>
@@ -73,7 +80,9 @@
             </div>
         </div>
     </header>
+
     <div class="main-container">
+
         <div class="container">
             <div id="modal" class="modal" data-bs-backdrop="static">
                 <div class="modal-dialog">
@@ -87,25 +96,23 @@
                                 <button name="alert-close" class="btn-close" data-bs-dismiss="alert"></button>
                                 Mensagem enviada. Retornaremos o mais rápido possível.
                             </div>
-                        
+
                             <div class="container">
-                                <form>
-                                    <label class="form-label" for="usuario_login">Nome:</label>
-                                    <input class="form-control" type="text" id="usuario_login" />
+                                <form id="form">
+                                    <label class="form-label" for="nome">Nome:</label>
+                                    <input class="form-control" required type="text" id="nome" />
                                     <label class="form-label" for="email">E-mail:</label>
-                                    <input class="form-control" type="email" id="email" />
+                                    <input class="form-control" required type="email" id="email" />
                                     <label class="form-label" for="mensagem">Mensagem:</label>
-                                    <textarea id="mensagem" class="form-control" maxlength="200"></textarea>
-                                    <div class="central">
-                                        <button name="enviar" type="button" class="btn btn-outline-success" data-bs-toggle="collapse" data-bs-target="#sucesso-login">Enviar</button>
-                                        <button name="limpar" type="reset" class="btn btn-outline-danger">Limpar</button>
-                                    </div>
+                                    <textarea id="mensagem" required class="form-control" maxlength="200"></textarea>
                                 </form>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button name="cancelar" type="button" class="btn-danger btn" data-bs-dismiss="modal">Cancelar</button>
-                            <button name="ok" type="button" class="btn-success btn" data-bs-dismiss="modal">Ok</button>
+                            <button form="form" name="cancelar" type="reset" class="btn-danger btn"
+                                data-bs-dismiss="modal">Cancelar</button>
+                            <button name="ok" type="button" class="btn-success btn" data-bs-toggle="collapse"
+                                data-bs-target="#sucesso-login">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -119,14 +126,16 @@
                         <div class="col">
                             <div class="card text-bg-dark">
                                 <div class="overlay"></div>
-                                    <img src="data:image/png;base64,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" alt="HTML logo"/>
-                                    <div class="card-body">
-                                        <h2 class="card-title">HTML5</h2>
-                                        <p class="card-text">
-                                            HTML (Linguagem de Marcação de HiperTexto) é o bloco de construção mais básico da web. Define o significado e a estrutura do conteúdo da web.
-                                        </p>
-                                        <a href="#html" class="btn btn-warning">Ler mais</a>
-                                    </div>
+                                <img src="./assets/img/html.png"
+                                    alt="HTML logo" />
+                                <div class="card-body">
+                                    <h3 class="card-title">HTML5</h3>
+                                    <p class="card-text">
+                                        HTML (Linguagem de Marcação de HiperTexto) é o bloco de construção mais básico
+                                        da web. Define o significado e a estrutura do conteúdo da web com elementos pré-definidos.
+                                    </p>
+                                    <a href="#html" class="btn btn-warning">Ler mais</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -134,11 +143,13 @@
                         <div class="col">
                             <div class="card text-bg-dark">
                                 <div class="overlay"></div>
-                                <img src="https://cdn.pixabay.com/photo/2015/04/23/17/41/javascript-736401_1280.png" alt="JavaScript Logo"/>
+                                <img src="./assets/img/javascript.png"
+                                    alt="JavaScript Logo" />
                                 <div class="card-body">
                                     <h2 class="card-title">JavaScript</h2>
                                     <p class="card-text">
-                                        JavaScript é uma linguagem que permite a você criar conteúdo que se atualiza dinamicamente, e mudar o comportamento da página.
+                                        JavaScript é uma linguagem que permite a você criar conteúdo que se atualiza
+                                        dinamicamente, e mudar o comportamento da página.
                                     </p>
                                     <a href="#javascript" class="btn btn-warning">Ler mais</a>
                                 </div>
@@ -149,11 +160,13 @@
                         <div class="col">
                             <div class="card text-bg-dark">
                                 <div class="overlay"></div>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfA9saZjv6q5LESFvG0kFqCWKyDY8GSwcY9TDkTFkTay-zXp30U2ydvFQoEYBMeh2mg4c&usqp=CAU" alt="Bootstrap Logo"/>
+                                <img src="./assets/img/bootstrap.png"
+                                    alt="Bootstrap Logo" />
                                 <div class="card-body">
                                     <h2 class="card-title">Bootstrap</h2>
                                     <p class="card-text">
-                                        Bootstrap é um framework front-end que fornece estruturas de CSS para a criação de sites e aplicações responsivas de forma rápida e simples.
+                                        Bootstrap é um framework front-end que fornece estruturas de CSS para a criação
+                                        de sites e aplicações responsivas de forma rápida e simples.
                                     </p>
                                     <a href="#bootstrap" class="btn btn-warning">Ler mais</a>
                                 </div>
@@ -164,11 +177,13 @@
                         <div class="col">
                             <div class="card text-bg-dark">
                                 <div class="overlay"></div>
-                                <img src="https://play-lh.googleusercontent.com/qqAm-pu8n8RXPww5P8F-mr7K_1YMDRc1Osvk91uEg-TgMcfUvZlxjyZJzrkfWeIN4GM" alt="jQuery Logo"/>
+                                <img src="./assets/img/jquery.png"
+                                    alt="jQuery Logo" />
                                 <div class="card-body">
                                     <h2 class="card-title">jQuery</h2>
                                     <p class="card-text">
-                                        jQuery é uma biblioteca livre que contém funções de  JavaScript que interage com páginas em HTML para simplificar os scripts no navegador.
+                                        jQuery é uma biblioteca livre que contém funções de JavaScript que interage com
+                                        páginas em HTML para simplificar os scripts no navegador.
                                     </p>
                                     <a href="#jquery" class="btn btn-warning">Ler mais</a>
                                 </div>
@@ -179,11 +194,12 @@
                         <div class="col">
                             <div class="card text-bg-dark">
                                 <div class="overlay"></div>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW-ODZKI76q-9Lg6EsbnHTIQFdy0vE2PqzIg&usqp=CAU" alt="Django Logo"/>
+                                <img src="./assets/img/django.png" alt="Django Logo" />
                                 <div class="card-body">
                                     <h2 class="card-title">Django</h2>
                                     <p class="card-text">
-                                        Django é um projeto de código aberto, colaborativo e próspero, um framework versátil que é capaz de desenvolver qualquer tipo de website.
+                                        Django é um projeto de código aberto, colaborativo e próspero, um framework
+                                        versátil que é capaz de desenvolver qualquer tipo de website.
                                     </p>
                                     <a href="#django" class="btn btn-warning">Ler mais</a>
                                 </div>
@@ -194,11 +210,13 @@
                         <div class="col">
                             <div class="card text-bg-dark">
                                 <div class="overlay"></div>
-                                <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/python_original_logo_icon_146381.png" alt="Python logo"/>
+                                <img src="./assets/img/python.jpg"
+                                    alt="Python logo" />
                                 <div class="card-body">
                                     <h2 class="card-title">Python</h2>
                                     <p class="card-text">
-                                        O Python é uma linguagem amplamente usada em aplicações da Web, desenvolvimento de software, ciência de dados e machine learning (ML). 
+                                        O Python é uma linguagem amplamente usada em aplicações da Web, desenvolvimento
+                                        de software, ciência de dados e machine learning (ML).
                                     </p>
                                     <a href="#python" class="btn btn-warning">Ler mais</a>
                                 </div>
@@ -217,33 +235,50 @@
                     <h2>HTML5</h2>
                     <div class="carousel-inner">
                         <div data-bs-interval="3000" class="carousel-item active">
-                            <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg" alt="Código HTML"/>
+                            <img class="d-block w-100"
+                                src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg"
+                                alt="Código HTML" />
                         </div>
                         <div data-bs-interval="3000" class="carousel-item">
-                            <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2017/09/05/10/19/business-2717063_1280.jpg" alt="Computador sobre uma mesa com código na tela"/>
+                            <img class="d-block w-100"
+                                src="https://cdn.pixabay.com/photo/2017/09/05/10/19/business-2717063_1280.jpg"
+                                alt="Computador sobre uma mesa com código na tela" />
                         </div>
                         <div data-bs-interval="3000" class="carousel-item">
-                            <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2016/11/19/22/52/coding-1841550_1280.jpg" alt="Código com efeito de zoom na tela"/>
+                            <img class="d-block w-100"
+                                src="https://cdn.pixabay.com/photo/2016/11/19/22/52/coding-1841550_1280.jpg"
+                                alt="Código com efeito de zoom na tela" />
                         </div>
                     </div>
-                    <button name="prev-button-html" data-bs-target="#carousel-html" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                    <button name="prev-button-html" data-bs-target="#carousel-html" data-bs-slide="prev"
+                        class="carousel-control-prev" type="button">
                         <span class="carousel-control-prev-icon"></span>
                     </button>
-                    <button name="next-button-html" data-bs-target="#carousel-html" data-bs-slide="next" class="carousel-control-next" type="button">
+                    <button name="next-button-html" data-bs-target="#carousel-html" data-bs-slide="next"
+                        class="carousel-control-next" type="button">
                         <span class="carousel-control-next-icon"></span>
                     </button>
                     <div class="carousel-indicators">
-                        <button name="slide-1-html" type="button" class="active" data-bs-target="#carousel-html" data-bs-slide-to="0"></button>
-                        <button name="slide-2-html" type="button" data-bs-target="#carousel-html" data-bs-slide-to="1"></button>
-                        <button name="slide-3-html" type="button" data-bs-target="#carousel-html" data-bs-slide-to="2"></button>
+                        <button name="slide-1-html" type="button" class="active" data-bs-target="#carousel-html"
+                            data-bs-slide-to="0"></button>
+                        <button name="slide-2-html" type="button" data-bs-target="#carousel-html"
+                            data-bs-slide-to="1"></button>
+                        <button name="slide-3-html" type="button" data-bs-target="#carousel-html"
+                            data-bs-slide-to="2"></button>
                     </div>
                 </div>
                 <div class="texto-linguagem">
                     <p>
-                        HTML (Linguagem de Marcação de HiperTexto) é o bloco de construção mais básico da web. Define o significado e a estrutura do conteúdo da web. Outras tecnologias além do HTML geralmente são usadas para descrever a aparência/apresentação (CSS) ou a funcionalidade/comportamento (JavaScript) de uma página da web.
+                        HTML (Linguagem de Marcação de HiperTexto) é o bloco de construção mais básico da web. Define o
+                        significado e a estrutura do conteúdo da web. Outras tecnologias além do HTML geralmente são
+                        usadas para descrever a aparência/apresentação (CSS) ou a funcionalidade/comportamento
+                        (JavaScript) de uma página da web.
                     </p>
                     <p>
-                        "Hipertexto" refere-se aos links que conectam páginas da Web entre si, seja dentro de um único site ou entre sites. Links são um aspecto fundamental da web. Ao carregar conteúdo na Internet e vinculá-lo a páginas criadas por outras pessoas, você se torna um participante ativo na world wide web.
+                        "Hipertexto" refere-se aos links que conectam páginas da Web entre si, seja dentro de um único
+                        site ou entre sites. Links são um aspecto fundamental da web. Ao carregar conteúdo na Internet e
+                        vinculá-lo a páginas criadas por outras pessoas, você se torna um participante ativo na world
+                        wide web.
                     </p>
                 </div>
             </div>
@@ -257,33 +292,49 @@
                     <h2>JavaScript</h2>
                     <div class="carousel-inner">
                         <div data-bs-interval="3000" class="carousel-item active">
-                            <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2015/06/24/15/45/code-820275_960_720.jpg" alt="Código JavaScript"/>
+                            <img class="d-block w-100"
+                                src="https://cdn.pixabay.com/photo/2015/06/24/15/45/code-820275_960_720.jpg"
+                                alt="Código JavaScript" />
                         </div>
                         <div data-bs-interval="3000" class="carousel-item">
-                            <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2015/09/05/20/02/coding-924920_1280.jpg" alt="Código na tela de um notebook"/>
+                            <img class="d-block w-100"
+                                src="https://cdn.pixabay.com/photo/2015/09/05/20/02/coding-924920_1280.jpg"
+                                alt="Código na tela de um notebook" />
                         </div>
                         <div data-bs-interval="3000" class="carousel-item">
-                            <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2020/04/30/15/34/code-5113374_1280.jpg" alt="Código na tela de um notebook"/>
+                            <img class="d-block w-100"
+                                src="https://cdn.pixabay.com/photo/2020/04/30/15/34/code-5113374_1280.jpg"
+                                alt="Código na tela de um notebook" />
                         </div>
                     </div>
-                    <button name="prev-button-js" data-bs-target="#carousel-javascript" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                    <button name="prev-button-js" data-bs-target="#carousel-javascript" data-bs-slide="prev"
+                        class="carousel-control-prev" type="button">
                         <span class="carousel-control-prev-icon"></span>
                     </button>
-                    <button name="next-button-js" data-bs-target="#carousel-javascript" data-bs-slide="next" class="carousel-control-next" type="button">
+                    <button name="next-button-js" data-bs-target="#carousel-javascript" data-bs-slide="next"
+                        class="carousel-control-next" type="button">
                         <span class="carousel-control-next-icon"></span>
                     </button>
                     <div class="carousel-indicators">
-                        <button name="slide-1-js" type="button" class="active" data-bs-target="#carousel-javascript" data-bs-slide-to="0"></button>
-                        <button name="slide-2-js" type="button" data-bs-target="#carousel-javascript" data-bs-slide-to="1"></button>
-                        <button name="slide-3-js" type="button" data-bs-target="#carousel-javascript" data-bs-slide-to="2"></button>
+                        <button name="slide-1-js" type="button" class="active" data-bs-target="#carousel-javascript"
+                            data-bs-slide-to="0"></button>
+                        <button name="slide-2-js" type="button" data-bs-target="#carousel-javascript"
+                            data-bs-slide-to="1"></button>
+                        <button name="slide-3-js" type="button" data-bs-target="#carousel-javascript"
+                            data-bs-slide-to="2"></button>
                     </div>
                 </div>
                 <div class="texto-linguagem">
                     <p>
-                        JavaScript (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e funcional). Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web.
+                        JavaScript (frequentemente abreviado como JS) é uma linguagem de programação interpretada
+                        estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos,
+                        orientado a objeto, imperativo e funcional). Juntamente com HTML e CSS, o JavaScript é uma das
+                        três principais tecnologias da World Wide Web.
                     </p>
                     <p>
-                        JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.
+                        JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos
+                        da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo
+                        JavaScript dedicado para executá-lo.
                     </p>
                 </div>
             </div>
@@ -297,33 +348,48 @@
                     <h2>Bootstrap</h2>
                     <div class="carousel-inner">
                         <div data-bs-interval="3000" class="carousel-item active">
-                            <img class="d-block w-100" src="https://cdn-media-2.freecodecamp.org/w1280/5f9c9f1e740569d1a4ca40e6.jpg" alt="Código HTML com Bootstrap"/>
+                            <img class="d-block w-100"
+                                src="https://cdn-media-2.freecodecamp.org/w1280/5f9c9f1e740569d1a4ca40e6.jpg"
+                                alt="Código HTML com Bootstrap" />
                         </div>
                         <div data-bs-interval="3000" class="carousel-item">
-                            <img class="d-block w-100" src="https://blog.ebaconline.com.br/blog/wp-content/uploads/2023/05/image1-15-1024x682.jpg" alt="Mãos sobre o teclado de um notebook"/>
+                            <img class="d-block w-100"
+                                src="https://blog.ebaconline.com.br/blog/wp-content/uploads/2023/05/image1-15-1024x682.jpg"
+                                alt="Mãos sobre o teclado de um notebook" />
                         </div>
                         <div data-bs-interval="3000" class="carousel-item">
-                            <img class="d-block w-100" src="https://blog.ebaconline.com.br/blog/wp-content/uploads/2023/05/image3-13-1024x683.jpg" alt="Código HTML com Bootstrap"/>
+                            <img class="d-block w-100"
+                                src="https://blog.ebaconline.com.br/blog/wp-content/uploads/2023/05/image3-13-1024x683.jpg"
+                                alt="Código HTML com Bootstrap" />
                         </div>
                     </div>
-                    <button name="prev-button-bootstrap" data-bs-target="#carousel-bootstrap" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                    <button name="prev-button-bootstrap" data-bs-target="#carousel-bootstrap" data-bs-slide="prev"
+                        class="carousel-control-prev" type="button">
                         <span class="carousel-control-prev-icon"></span>
                     </button>
-                    <button name="next-button-bootstrap" data-bs-target="#carousel-bootstrap" data-bs-slide="next" class="carousel-control-next" type="button">
+                    <button name="next-button-bootstrap" data-bs-target="#carousel-bootstrap" data-bs-slide="next"
+                        class="carousel-control-next" type="button">
                         <span class="carousel-control-next-icon"></span>
                     </button>
                     <div class="carousel-indicators">
-                        <button name="slide-1-bootstrap" type="button" class="active" data-bs-target="#carousel-bootstrap" data-bs-slide-to="0"></button>
-                        <button name="slide-2-bootstrap" type="button" data-bs-target="#carousel-bootstrap" data-bs-slide-to="1"></button>
-                        <button name="slide-3-bootstrap" type="button" data-bs-target="#carousel-bootstrap" data-bs-slide-to="2"></button>
+                        <button name="slide-1-bootstrap" type="button" class="active"
+                            data-bs-target="#carousel-bootstrap" data-bs-slide-to="0"></button>
+                        <button name="slide-2-bootstrap" type="button" data-bs-target="#carousel-bootstrap"
+                            data-bs-slide-to="1"></button>
+                        <button name="slide-3-bootstrap" type="button" data-bs-target="#carousel-bootstrap"
+                            data-bs-slide-to="2"></button>
                     </div>
                 </div>
                 <div class="texto-linguagem">
                     <p>
-                        O Bootstrap foi criado pelo Twitter em 2011. É um framework de código aberto e gratuito, utilizado por desenvolvedores Front-end e Full Stack para criar designs de sites e aplicativos.
+                        O Bootstrap foi criado pelo Twitter em 2011. É um framework de código aberto e gratuito,
+                        utilizado por desenvolvedores Front-end e Full Stack para criar designs de sites e aplicativos.
                     </p>
                     <p>
-                        Ele possui vários recursos para configurar estilos e elementos de maneira simples, rápida e eficaz, que permitem desenhar interfaces de usuário claras e compatíveis com dispositivos móveis e desktops. O propósito desta ferramenta é oferecer ao usuário uma experiência mais agradável de leitura e navegação.
+                        Ele possui vários recursos para configurar estilos e elementos de maneira simples, rápida e
+                        eficaz, que permitem desenhar interfaces de usuário claras e compatíveis com dispositivos móveis
+                        e desktops. O propósito desta ferramenta é oferecer ao usuário uma experiência mais agradável de
+                        leitura e navegação.
                     </p>
                 </div>
             </div>
@@ -337,33 +403,48 @@
                     <h2>jQuery</h2>
                     <div class="carousel-inner">
                         <div data-bs-interval="3000" class="carousel-item active">
-                            <img class="d-block w-100" src="https://www.freecodecamp.org/news/content/images/2023/02/image3-1.png" alt="Código"/>
+                            <img class="d-block w-100"
+                                src="https://www.freecodecamp.org/news/content/images/2023/02/image3-1.png"
+                                alt="Código" />
                         </div>
                         <div data-bs-interval="3000" class="carousel-item">
-                            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp6I9y6rIe7oi5kYcWz8epn_phUFH5P9gZRRkS0MCoJz-RKFikrUk6F3BBoiqj2sG86vk&usqp=CAU"  alt="Código com logo jQuery ao lado"/>
+                            <img class="d-block w-100"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp6I9y6rIe7oi5kYcWz8epn_phUFH5P9gZRRkS0MCoJz-RKFikrUk6F3BBoiqj2sG86vk&usqp=CAU"
+                                alt="Código com logo jQuery ao lado" />
                         </div>
                         <div data-bs-interval="3000" class="carousel-item">
-                            <img class="d-block w-100" src="https://www.pragimtech.com/wp-content/uploads/2019/03/jquery.jpg"  alt="Código"/>
+                            <img class="d-block w-100"
+                                src="https://www.pragimtech.com/wp-content/uploads/2019/03/jquery.jpg" alt="Código" />
                         </div>
                     </div>
-                    <button name="prev-button-jquery" data-bs-target="#carousel-jquery" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                    <button name="prev-button-jquery" data-bs-target="#carousel-jquery" data-bs-slide="prev"
+                        class="carousel-control-prev" type="button">
                         <span class="carousel-control-prev-icon"></span>
                     </button>
-                    <button  name="next-button-jquery" data-bs-target="#carousel-jquery" data-bs-slide="next" class="carousel-control-next" type="button">
+                    <button name="next-button-jquery" data-bs-target="#carousel-jquery" data-bs-slide="next"
+                        class="carousel-control-next" type="button">
                         <span class="carousel-control-next-icon"></span>
                     </button>
                     <div class="carousel-indicators">
-                        <button name="slide-1-jquery" type="button" class="active" data-bs-target="#carousel-jquery" data-bs-slide-to="0"></button>
-                        <button name="slide-2-jquery" type="button" data-bs-target="#carousel-jquery" data-bs-slide-to="1"></button>
-                        <button name="slide-3-jquery" type="button" data-bs-target="#carousel-jquery" data-bs-slide-to="2"></button>
+                        <button name="slide-1-jquery" type="button" class="active" data-bs-target="#carousel-jquery"
+                            data-bs-slide-to="0"></button>
+                        <button name="slide-2-jquery" type="button" data-bs-target="#carousel-jquery"
+                            data-bs-slide-to="1"></button>
+                        <button name="slide-3-jquery" type="button" data-bs-target="#carousel-jquery"
+                            data-bs-slide-to="2"></button>
                     </div>
                 </div>
                 <div class="texto-linguagem">
                     <p>
-                        jQuery é uma biblioteca popular do JavaScript. Ela foi criado por John Resig em 2006 com o propósito de facilitar a vida dos desenvolvedores que usam JavaScript nos seus sites. Não é uma linguagem de programação separada, funciona em conjunto com o JavaScript. Com jQuery, você vai conseguir fazer muito mais com menos.
+                        jQuery é uma biblioteca popular do JavaScript. Ela foi criado por John Resig em 2006 com o
+                        propósito de facilitar a vida dos desenvolvedores que usam JavaScript nos seus sites. Não é uma
+                        linguagem de programação separada, funciona em conjunto com o JavaScript. Com jQuery, você vai
+                        conseguir fazer muito mais com menos.
                     </p>
                     <p>
-                        Criar códigos pode ser um pouco cansativo, especialmente quando isso envolve muitas strings. A jQuery compacta várias linhas de código em uma única função. Assim, você não precisa reescrever todos os blocos repetidamente para concluir sua tarefa.
+                        Criar códigos pode ser um pouco cansativo, especialmente quando isso envolve muitas strings. A
+                        jQuery compacta várias linhas de código em uma única função. Assim, você não precisa reescrever
+                        todos os blocos repetidamente para concluir sua tarefa.
                     </p>
                 </div>
             </div>
@@ -377,33 +458,47 @@
                     <h2>Django</h2>
                     <div class="carousel-inner">
                         <div data-bs-interval="3000" class="carousel-item active">
-                            <img class="d-block w-100" src="https://www.freecodecamp.org/espanol/news/content/images/2021/04/altumcode-dC6Pb2JdAqs-unsplash.jpg" alt="Código na tela de um notebook"/>
+                            <img class="d-block w-100"
+                                src="https://www.freecodecamp.org/espanol/news/content/images/2021/04/altumcode-dC6Pb2JdAqs-unsplash.jpg"
+                                alt="Código na tela de um notebook" />
                         </div>
                         <div data-bs-interval="3000" class="carousel-item">
-                            <img class="d-block w-100" src="https://thumbs.dreamstime.com/z/inscri%C3%A7%C3%A3o-do-django-no-plano-de-fundo-laptop-e-c%C3%B3digo-aprenda-programa%C3%A7%C3%A3o-idioma-curso-inform%C3%A1tica-208727123.jpg" alt="Django logo"/>
+                            <img class="d-block w-100"
+                                src="https://thumbs.dreamstime.com/z/inscri%C3%A7%C3%A3o-do-django-no-plano-de-fundo-laptop-e-c%C3%B3digo-aprenda-programa%C3%A7%C3%A3o-idioma-curso-inform%C3%A1tica-208727123.jpg"
+                                alt="Django logo" />
                         </div>
                         <div data-bs-interval="3000" class="carousel-item">
-                            <img class="d-block w-100" src="https://miro.medium.com/max/1200/1*G4BpdI7ghuas3slz0ygdIw.jpeg" alt="Código"/>
+                            <img class="d-block w-100"
+                                src="https://miro.medium.com/max/1200/1*G4BpdI7ghuas3slz0ygdIw.jpeg" alt="Código" />
                         </div>
                     </div>
-                    <button  name="prev-button-django" data-bs-target="#carousel-django" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                    <button name="prev-button-django" data-bs-target="#carousel-django" data-bs-slide="prev"
+                        class="carousel-control-prev" type="button">
                         <span class="carousel-control-prev-icon"></span>
                     </button>
-                    <button  name="next-button-django" data-bs-target="#carousel-django" data-bs-slide="next" class="carousel-control-next" type="button">
+                    <button name="next-button-django" data-bs-target="#carousel-django" data-bs-slide="next"
+                        class="carousel-control-next" type="button">
                         <span class="carousel-control-next-icon"></span>
                     </button>
                     <div class="carousel-indicators">
-                        <button name="slide-1-django" type="button" class="active" data-bs-target="#carousel-django" data-bs-slide-to="0"></button>
-                        <button name="slide-2-django" type="button" data-bs-target="#carousel-django" data-bs-slide-to="1"></button>
-                        <button name="slide-3-django" type="button" data-bs-target="#carousel-django" data-bs-slide-to="2"></button>
+                        <button name="slide-1-django" type="button" class="active" data-bs-target="#carousel-django"
+                            data-bs-slide-to="0"></button>
+                        <button name="slide-2-django" type="button" data-bs-target="#carousel-django"
+                            data-bs-slide-to="1"></button>
+                        <button name="slide-3-django" type="button" data-bs-target="#carousel-django"
+                            data-bs-slide-to="2"></button>
                     </div>
                 </div>
                 <div class="texto-linguagem">
                     <p>
-                        Django é um framework web Python de alto nível que permite o rápido desenvolvimento de sites seguros e de fácil manutenção. Construido por desenvolvedores experientes, o Django cuida de grande parte do trabalho de desenvolvimento web, para que você possa se concentrar em escrever seu aplicativo sem precisar reinventar a roda.
+                        Django é um framework web Python de alto nível que permite o rápido desenvolvimento de sites
+                        seguros e de fácil manutenção. Construido por desenvolvedores experientes, o Django cuida de
+                        grande parte do trabalho de desenvolvimento web, para que você possa se concentrar em escrever
+                        seu aplicativo sem precisar reinventar a roda.
                     </p>
                     <p>
-                        É gratuito e de código aberto, tem uma comunidade próspera e ativa, ótima documentação e muitas opções de suporte gratuito e pago.
+                        É gratuito e de código aberto, tem uma comunidade próspera e ativa, ótima documentação e muitas
+                        opções de suporte gratuito e pago.
                     </p>
                 </div>
             </div>
@@ -417,58 +512,65 @@
                     <h2>Python</h2>
                     <div class="carousel-inner">
                         <div data-bs-interval="3000" class="carousel-item active">
-                            <img class="d-block w-100" src="https://hermes.dio.me/articles/cover/dcdd12a6-3ba3-46b2-aa27-6727419ac66f.jpg" alt="Código com logo do Python"/>
+                            <img class="d-block w-100"
+                                src="https://hermes.dio.me/articles/cover/dcdd12a6-3ba3-46b2-aa27-6727419ac66f.jpg"
+                                alt="Código com logo do Python" />
                         </div>
                         <div data-bs-interval="3000" class="carousel-item">
-                            <img class="d-block w-100" src="https://media.licdn.com/dms/image/D4D12AQHlJfEC-t6cEA/article-cover_image-shrink_600_2000/0/1683060003234?e=2147483647&v=beta&t=3mklwSitJNSheXdTSqruq-sfVvyqA3jmnfk-fgLslkQ" alt="Código com logo do Python"/>
+                            <img class="d-block w-100"
+                                src="https://media.licdn.com/dms/image/D4D12AQHlJfEC-t6cEA/article-cover_image-shrink_600_2000/0/1683060003234?e=2147483647&v=beta&t=3mklwSitJNSheXdTSqruq-sfVvyqA3jmnfk-fgLslkQ"
+                                alt="Código com logo do Python" />
                         </div>
                         <div data-bs-interval="3000" class="carousel-item">
-                            <img class="d-block w-100" src="https://t.ctcdn.com.br/OZ1GOoGkBZGdKNe0B3prxreoBp4=/1024x576/smart/i252888.jpeg" alt="Código"/>
+                            <img class="d-block w-100"
+                                src="https://t.ctcdn.com.br/OZ1GOoGkBZGdKNe0B3prxreoBp4=/1024x576/smart/i252888.jpeg"
+                                alt="Código" />
                         </div>
                     </div>
-                    <button name="prev-button-python" data-bs-target="#carousel-python" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                    <button name="prev-button-python" data-bs-target="#carousel-python" data-bs-slide="prev"
+                        class="carousel-control-prev" type="button">
                         <span class="carousel-control-prev-icon"></span>
                     </button>
-                    <button name="next-button-python" data-bs-target="#carousel-python" data-bs-slide="next" class="carousel-control-next" type="button">
+                    <button name="next-button-python" data-bs-target="#carousel-python" data-bs-slide="next"
+                        class="carousel-control-next" type="button">
                         <span class="carousel-control-next-icon"></span>
                     </button>
                     <div class="carousel-indicators">
-                        <button name="slide-1-python" type="button" class="active" data-bs-target="#carousel-python" data-bs-slide-to="0"></button>
-                        <button name="slide-2-python" type="button" data-bs-target="#carousel-python" data-bs-slide-to="1"></button>
-                        <button name="slide-3-python" type="button" data-bs-target="#carousel-python" data-bs-slide-to="2"></button>
+                        <button name="slide-1-python" type="button" class="active" data-bs-target="#carousel-python"
+                            data-bs-slide-to="0"></button>
+                        <button name="slide-2-python" type="button" data-bs-target="#carousel-python"
+                            data-bs-slide-to="1"></button>
+                        <button name="slide-3-python" type="button" data-bs-target="#carousel-python"
+                            data-bs-slide-to="2"></button>
                     </div>
                 </div>
                 <div class="texto-linguagem">
                     <p>
-                        Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Foi lançada por Guido van Rossum em 1991.
+                        Python é uma linguagem de programação de alto nível, interpretada de script, imperativa,
+                        orientada a objetos, funcional, de tipagem dinâmica e forte. Foi lançada por Guido van Rossum em
+                        1991.
                     </p>
                     <p>
-                        Atualmente, possui um modelo de desenvolvimento comunitário, aberto e gerenciado pela organização sem fins lucrativos Python Software Foundation.
+                        Atualmente, possui um modelo de desenvolvimento comunitário, aberto e gerenciado pela
+                        organização sem fins lucrativos Python Software Foundation.
                     </p>
                 </div>
             </div>
         </section>
     </div>
+
     <footer>
         <div class="container-footer">
-            <p>
-                2024 - &copy; Let's Code - Todos os direitos reservados
-            </p>
-            <ul class="footer-img">
-                <li>
-                    <a href="https://github.com/guicamargo19">
-                        <img src="./assets/img/github-logo.png" alt="GitHub">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/gui.fcamargo/">
-                        <img src="./assets/img/instagram.png" alt="Instagram">
-                    </a>
-                </li>
-            </ul>
+            <div>
+                <script>document.write(new Date().getFullYear());</script> - &copy;
+                <a href="https://portfolio-pink-omega-63.vercel.app/">
+                    <strong>Portfólio Guilherme Camargo</strong>
+                </a> - Todos os direitos reservados
+            </div>
         </div>
     </footer>
-    
+
     <script src="./assets/lib/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

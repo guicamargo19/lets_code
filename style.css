@@ -2,7 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right,#f5f5f5cc,#f5f5f5cc),url(https://servidor-estatico-tan.vercel.app/common-bg.svg);
+    background-position: center;
 }
 
 .main-container {
@@ -15,44 +20,48 @@ p {
 }
 
 header {
-    background-color: darkcyan;
-    color: #eee;
+    font-weight: bold;
 }
 
 header .nav-link {
-    font-size: 25px;
-    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
     padding: 8px;
     margin-left: 6px;
+    color: #000;
+    transition: all ease-in-out .2s;
 }
 
 nav .nav-item button {
     padding-right: 48px;
-    padding-left: 28px;
+    color: #000;
+    text-transform: uppercase;
+    padding-left: 58px;
+    transition: all ease-in-out .2s;
 }
 
 header .nav-link:hover {
-    color: darkcyan;
-    background-color: #eee;
+    color: gray;
+    transition: all ease-in-out .2s;
 }
 
 header .nav-link:focus {
-    color: darkcyan;
-    background-color: #eee;
+    color: gray;
 }
 
 header .small {
     font-size: 14px;
-    padding-left: 6px;
+    padding-left: 10px;
 }
 
-.dropdown-menu a{
+.dropdown-menu a {
     width: 100%;
     text-decoration: none;
 }
 
 a .dropdown-item {
-    color: darkcyan;
+    color: #000;
     width: 100%;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -60,17 +69,13 @@ a .dropdown-item {
 }
 
 a .dropdown-item:hover {
-    background-color: darkcyan;
-    color: #eee;
+    background-color: #eee;
+    color: #000;
 }
 
 form label {
     padding-top: 4px;
     padding-bottom: 4px;
-}
-
-.central {
-    padding-top: 8px;
 }
 
 form textarea {
@@ -94,25 +99,26 @@ form textarea {
     position: absolute;
     top: 0;
     left: 0;
-    background-color:black;
+    background-color:#000;
     opacity: 0;
-    transition: 0.5s;
+    transition: all ease-in-out .3s;
     width: 100%;
     height: 100%;
-    border-radius: 14px;
 }
 
 .container-card .card {
-    border-radius: 14px;
     position: relative;
+    border: none;
+    border-radius: 0;
+    height: 100%;
 }
 
 .overlay:hover {
     opacity: 40%;
 }
 
-.container-card .card img {   
-    border-radius: 12px;
+.card img {
+    height: 320px;
 }
 
 .card-body {
@@ -120,8 +126,11 @@ form textarea {
 }
 
 .card-text {
-    height: 120px;
+    height: 160px;
+    font-size: 16px;
+    font-weight: normal;
 }
+
 
 .row a {
     float: inline-end;
@@ -133,25 +142,22 @@ form textarea {
 
 .row a:hover {
     background-color: darkgoldenrod;
+    color: #fff;
 }
 
 .container-linguagens {
     display: grid;
-    grid-template-columns: repeat(2, 49.25%);
-    column-gap: 1%;
+    grid-template-columns: repeat(2, 48.25%);
+    column-gap: 4%;
     padding-bottom: 32px;
 }
 
+.carousel-item img {
+    height: 320px;
+}
+
 #html .carousel-indicators button {
-    margin-bottom: 42px;
-}
-
-#bootstrap .carousel-indicators button {
-    margin-bottom: 42px;
-}
-
-#jquery .carousel-indicators button {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .container-linguagens h2 {
@@ -167,49 +173,44 @@ form textarea {
 
 .texto-linguagem {
     padding-top: 56px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .container-footer {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    padding: 48px;
     align-items: center;
-    background-color: #565555;
-    color: #fff;
-    width: 100%;
-    margin: 0 auto;
+    background-color: darkgray;
+    color: #000;
 }
 
-.container-footer p {
-    padding-top: 12px;
-    font-size: 18px;
+.container-footer a {
+    color: #000;
+    text-decoration: none;
+    transition: all ease-in-out .2s;
 }
 
-.footer-img {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 8px;
-}
-
-.footer-img li{
-    padding: 8px;
-}
-
-.container-footer img {
-    width: 36px;
+.container-footer a:hover {
+    color: #242323;
+    transition: all ease-in-out .2s;
 }
 
 @media screen and (max-width: 640px) {
-
-    .container {
+    .main-container {
         max-width: 90%;
-        display: block;
     }
 
+    #header {
+        padding-top: 20px;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+    
     button>span {
-        font-size: 25px;
+        font-size: 24px;
     }
 
     .nav-item .btn-group .dropdown-menu {
@@ -217,72 +218,69 @@ form textarea {
     }
 
     nav .nav-item {
-        padding-top: 6px;
-        margin-top: 6px;
-    }
-
-    nav .nav-item a {
-        padding: 6px;
-        padding-left: 6px;
-        font-size: 15px;
-        margin-right: 6px;
-        margin-left: 0;
-    }
-
-    nav .nav-item-contato a{
-        margin-right: 0;
-        margin-left: 6px;
+        padding-top: 18px;
     }
 
     nav .nav-item button {
-        font-size: 15px;
-        padding: 6px;
+        padding-left: 60px;
+        padding-right: 40px;
         margin: 0;
     }
 
-    header .small {
-        font-size: 10px;
-    }
-
-    .dropdown-item a {
-        font-size: 15px;
-    }
-
-    .btn-group button {
-        width: 158px;
+    header .nav-link {
+        color: #000;
+        font-size: 14px;
+        margin: 0;
     }
 
     .container-card {
-        display: grid;
-        grid-template-columns: 100%;
-        max-width: 100%;
-        row-gap: 1%;
+        display: block;
+        column-gap: 20px;
     }
 
-    .linha1 {
-        margin-top: 250px;
+    .carousel-item img {
+        height: 200px;
+    }
+
+    #html .carousel-indicators button {
+        margin-bottom: 0;
+    }
+
+    .row .col {
+        padding-bottom: 20px;
     }
 
     .texto-linguagem {
-        padding-top: 20px;
-        font-size: 18px;
+        font-size: 14px;
+        padding-top: 14px;
     }
 
-    .container-footer {
-        padding: 0 36px;
+    .container-linguagens {
+        display: block;
     }
 
-    .container-footer p {
-        font-size: 13px;
+    .linha {
+        margin-top: 16px;
+    }
+
+    footer {
+        text-align: center;
     }
 }
 
 @media screen and (min-width: 641px) and (max-width: 1023px) {
-    .container {
+    .main-container {
         max-width: 90%;
-        display: block;
     }
 
+    #header {
+        padding-top: 20px;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+    
     button>span {
         font-size: 30px;
     }
@@ -296,42 +294,36 @@ form textarea {
     }
 
     nav .nav-item {
-        padding-top: 6px;
-        margin-top: 6px;
+        padding-top: 12px;
+        margin-top: 12px;
     }
 
     header .nav-link {
-        font-size: 24px;
-        color: #fff;
-        padding: 8px;
-        padding-left: 0;
-        margin-left: 0;
-        font-weight: bold;
-    }
-
-    header .nav-item a {
-        margin-right: 8px;
-        margin-left: 8px;
-        padding: 8px;
+        color: #000;
     }
 
     .btn-group button {
-        width: 160px;
-        padding-left: 8px;
+        width: 190px;
+        padding-left: 28px;
     }
 
     .container-card {
         display: grid;
         grid-template-columns: repeat(2, 50%);
         max-width: 100%;
+        padding-bottom: 60px;
     }
 
     .texto-linguagem {
-        padding-top: 20px;
-        font-size: 18px;
+        font-size: 16px;
+        padding-top: 14px;
     }
 
-    .container-footer {
-        padding: 0 40px;
+    .container-linguagens {
+        display: block;
+    }
+
+    .linha {
+        margin-top: 20px;
     }
 }
