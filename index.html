@@ -85,39 +85,37 @@
 
         <div class="container">
             <div id="modal" class="modal" data-bs-backdrop="static">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5>Mande-nos uma mensagem</h5>
-                            <button name="modal-close" type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="alert alert-success collapse alert-dismissible" id="sucesso-login">
-                                <button name="alert-close" class="btn-close" data-bs-dismiss="alert"></button>
-                                Mensagem enviada. Retornaremos o mais rápido possível.
-                            </div>
-
-                            <div class="container">
-                                <form id="form">
-                                    <label class="form-label" for="nome">Nome:</label>
-                                    <input class="form-control" required type="text" id="nome" />
-                                    <label class="form-label" for="email">E-mail:</label>
-                                    <input class="form-control" required type="email" id="email" />
-                                    <label class="form-label" for="mensagem">Mensagem:</label>
-                                    <textarea id="mensagem" required class="form-control" maxlength="200"></textarea>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button form="form" name="cancelar" type="reset" class="btn-danger btn"
-                                data-bs-dismiss="modal">Cancelar</button>
-                            <button name="ok" type="button" class="btn-success btn" data-bs-toggle="collapse"
-                                data-bs-target="#sucesso-login">Enviar</button>
-                        </div>
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Mande-nos uma mensagem</h5>
+                    <button name="modal-close" type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="alert alert-success collapse alert-dismissible" id="sucesso-login">
+                      <button name="alert-close" class="btn-close" data-bs-dismiss="alert"></button>
+                      Mensagem enviada. Retornaremos o mais rápido possível.
                     </div>
+          
+                    <div class="container">
+                      <form id="form">
+                        <label class="form-label" for="nome">Nome:</label>
+                        <input class="form-control" required type="text" id="nome" />
+                        <label class="form-label" for="email">E-mail:</label>
+                        <input class="form-control" required type="email" id="email" />
+                        <label class="form-label" for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" required class="form-control" maxlength="200"></textarea>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button form="form" name="cancelar" type="reset" class="btn-danger btn" data-bs-dismiss="modal">Cancelar</button>
+                    <button name="ok" type="button" class="btn-success btn" id="enviar-btn">Enviar</button>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
 
         <section id="cards">
             <div class="container">
@@ -570,7 +568,37 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./assets/lib/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Function to validate email format
+            function isValidEmail(email) {
+              return /\S+@\S+\.\S+/.test(email);
+            }
+        
+            // Handle form submission
+            $("#enviar-btn").click(function() {
+              var nome = $("#nome").val();
+              var email = $("#email").val();
+              var mensagem = $("#mensagem").val();
+        
+              // Simple validation, you can add more complex validation as needed
+              if (nome.trim() === '' || email.trim() === '' || mensagem.trim() === '') {
+                alert("Por favor, preencha todos os campos.");
+                return;
+              }
+        
+              if (!isValidEmail(email)) {
+                alert("Por favor, insira um endereço de e-mail válido.");
+                return;
+              }
+        
+              // If form is valid, display success message
+              $("#sucesso-login").show();
+            });
+          });
+    </script>
 </body>
 
 </html>
